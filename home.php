@@ -18,6 +18,79 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<style>
+
+.box{
+	background-color:white;
+  width: 65%;
+  
+  margin-top:-410px;
+  margin-left:100px;
+  padding: 10px;
+   height:410px;
+   position:fixed;
+
+  
+}
+
+footer{
+
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   #A2B70D
+   text-align: center;
+   height:max-content;
+}
+.accordion {
+ 
+  color: whites;
+  cursor: pointer;
+  padding: 5px;
+  width: 90%;
+margin-left:50px;
+height:50px;
+margin-top:15px;
+  text-align: left;
+  font-size: 20px;
+  transition: 0.4s;
+border-radius:7px;
+    background-color: #150e0e63;
+	
+}
+
+.accordion:hover {
+  background-color: grey; 
+}
+
+.panel {
+	margin-top:7px;
+	margin-left:50px;
+border-radius:7px;
+	
+
+	color:black;
+	width:90%;
+ height:80px;
+  display: none;
+  font-size:17px;
+  background-color: white;
+  overflow: hidden;
+}
+.accordion:after {
+  content: '\2B9F';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-right: 10px;
+}
+
+
+
+</style>
 </head>
 <body id="top">
 <!-- ################################################################################################ -->
@@ -94,16 +167,15 @@ Licence URI: http://www.os-templates.com/template-terms
     <!-- main body -->
     <!-- ################################################################################################ -->
     <div class="sectiontitle">
-      <h6 class="heading">PERSONAL DETAILS</h6>
+         
       
     </div>
     <div class="group excerpts">
    
-      <article style="margin-left: 342px;" class="one_third">
+      <article style="margin-left: -300px; margin-top:30px;width:400px;height:410px; background-color:#150e0e63;" class="one_third">
         <div class="hgroup">
-          <h6 class="heading"> <?php if(isset($_SESSION['username'])){ $usersData = getUsersData(getId($_SESSION['username'])); echo $usersData['name']; } ?>
-          </h6>
-          <!-- <em>General Manager</em></div> -->
+         
+          <br><br>
 
           <?php 
   if(isset($_SESSION['username'])){
@@ -124,24 +196,73 @@ $dir_path = "student_images/";
     
 
 ?>
-        
+        <br>
         <div class="txtwrap">
-          <p> ROLL NO: <?php if(isset($_SESSION['username'])){ $usersData = getUsersData(getId($_SESSION['username'])); echo $usersData['rollno']; } ?></p>  <p>
-          SEMESTER:
+		       <h4> Name: <?php if(isset($_SESSION['username'])){ $usersData = getUsersData(getId($_SESSION['username'])); echo $usersData['name']; } ?>
+          </h4>
+		  <br>
+          <h4> Roll No: <?php if(isset($_SESSION['username'])){ $usersData = getUsersData(getId($_SESSION['username'])); echo $usersData['rollno']; } ?></h4>  
+		  <br>
+		  <h4>
+          Semester:
           <?php 
              if(isset($_SESSION['username'])){ $usersData = getUsersData(getId($_SESSION['username'])); echo $usersData['sem'];} ?>
-          </p>
+          </h4>
         </div>
       
       </article>
      
     </div>
+	
+  <!--<div class="group excerpts">
+  -->
+	<article style="margin-left: 250px; margin-top:-410px;width:100%;height:410px ;" class="one_third">
+	<button class="accordion">1.  How do I login for the first time?</button>
+<div class="panel">
+  <p>  Click on First Time User/Forgot password and enter your Somaiya ID to get your initial password on your mail-id.After logging in you can 
+    change your password for your account.</p>
+</div>
+
+<button class="accordion">2. Can I view my progress or the activities done by me ?</button>
+<div class="panel">
+  <p>Yes,you can view your progress on clicking on VIEW MY PROGRESS button which will show your uploaded activities and 
+    details under various categories.You can also delete an entry in case you dont want the entry to be there.</p>
+</div>
+
+
+<button class="accordion"> 3. How do I add an activity?</button>
+<div class="panel">
+  <p> You can simply add an activity by clicking on ADD NEW ACTIVITY which will show various categories of activities
+   you can upload.Just click on any category,add details accordingly and press submit.</p>
+</div>
+
+
+<button class="accordion"> 4. Do I need a proof for the  activity I upload?</button>
+<div class="panel">
+  <p> Yes definitely. You should upload some proof like a certificate or a Letter of Appreciation pertaining to the activity you upload.
+  It should be in doc or pdf format.Additional image can also be uploaded(if any).</p>
+</div>
+
+<button class="accordion"> 5. Is there any rule for the name of the files to be uploaded?</button>
+<div class="panel">
+  <p> For uniquely attributing each file to a user,the name of the file needs to be [SerialNumber_YourRollnumber].
+   More details regarding name of the files is provided in the add new activity bar while uploading the files.</p>
+</div>
+
+<button class="accordion">   6. What if I need to see my classmates uplaods?</button>
+<div class="panel">
+  <p>  There is a menu of the left side of the page with the title "View". It displays various entries done by different users.</p>
+</div>
+
+
+</article>
+
     <!-- ################################################################################################ -->
     <!-- / main body -->
     
   </main>
 </div>
-<h2 style="font-size: 28px;margin-left: 492px;" class="heading">Student Achievements</h2>
+<!--<h2 style="font-size: 28px;margin-left: 492px;" class="heading">Student Achievements</h2>
    <div class="w3-content w3-section" style=" max-width: 481px;margin-left: 432px;margin-top: -1px;" >
   <img class="mySlides" src="slideshow/1.jpg" style="width:400%">
   <img class="mySlides" src="slideshow/2.jpg" style="width:400%">
@@ -149,24 +270,25 @@ $dir_path = "student_images/";
   <img class="mySlides" src="slideshow/4.jpg" style="width:400%">
   <img class="mySlides" src="slideshow/5.jpeg" style="width:400%">
   <img class="mySlides" src="slideshow/6.jpeg" style="width:400%">
+</div>-->
+
+<footer class="page-footer font-small special-color-dark pt-4">
+<center>
+ <p style="font-size: 20px"> For any further queries Email us at admin@somaiya.edu </p>
+
+<a href="contact_before.php" style="font-size: 20px">Click here for general FAQs</a>
+<!--
+<div class="vl"></div>
+-->
+</center>
+</footer>
+
+
 </div>
-</div><!--  background image tag -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 
 
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
+
+
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
 <script src="layout/scripts/jquery.min.js"></script>
@@ -175,7 +297,7 @@ $dir_path = "student_images/";
 <script>
 
 
-var myIndex = 0;
+/*var myIndex = 0;
 carousel();
 
 function carousel() {
@@ -188,6 +310,21 @@ function carousel() {
   if (myIndex > x.length) {myIndex = 1}    
   x[myIndex-1].style.display = "block";  
   setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+*/
+var acc = document.getElementsByClassName("accordion");
+var j;
+
+for (j = 0; j < acc.length; j++) {
+  acc[j].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
 }
 </script> 
 </body>

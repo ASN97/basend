@@ -61,7 +61,7 @@ File: Layout CSS
 .excerpts article figure{display:block; position:relative;}
 .excerpts article figure img{}
 .excerpts article figure figcaption{position:absolute; top:10px; left:10px; width:50px;}
-.excerpts article figure figcaption *{display:block; margin:0; padding:0; text-align:center; text-transform:uppercase; font-style:normal; line-height:1;}
+.excerpts article figure figcaption *{display:block; margin:0; padding:0; text-align:center; font-style:normal; line-height:1;}
 .excerpts article figure figcaption time{width:100%;}
 .excerpts article figure figcaption time strong{padding:12px 0; font-size:18px;}
 .excerpts article figure figcaption time em{padding:8px 0;}
@@ -224,7 +224,7 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 
 /* Tables
 --------------------------------------------------------------------------------------------------------------- */
-table, th, td{border:1px solid; border-collapse:collapse; vertical-align:top; margin:50px 0 0 -75px; max-width:350px;}
+table, th, td{ border-collapse:collapse; vertical-align:top; margin:50px 0 0 -75px; max-width:350px;}
 table, th{table-layout:auto;}
 table{width:100%; margin-bottom:15px;}
 th, td{padding:5px 5px; }
@@ -265,8 +265,10 @@ td{border-width:0 1px;}
 /* Colours
 --------------------------------------------------------------------------------------------------------------- */
 body{
-	background-image:url('../../images/3.jpg');
-	
+
+	background-image:url('../../images/demo/backgrounds/grey.jpg');
+	/*background-color:#F3E8E7;
+	*/
 	background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -286,7 +288,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#A2B70D;}
 
 
 /* Rows */
-.row1{color:#FFFFFF; background-color:rgba(0,0,0,.60);}
+.row1{color:#FFFFFF; background-color:black;}
 .row2{color:#191919; background-color:#F6F6F6;}
 .row3{color:#191919; background-color:#FFFFFF;}
 .row4{color:#CBCBCB;}
@@ -341,15 +343,15 @@ input:focus, textarea:focus, *:required:focus{border-color:#A2B70D;}
 
 
 /* Tables + Comments */
-table, th, td, #comments .avatar, #comments input, #comments textarea{border-color:#D7D7D7;}
-#comments input:focus, #comments textarea:focus, #comments *:required:focus{border-color:#A2B70D;}
-th{/*color:#FFFFFF;*/ background-color:#373737;}
+table, th, td, #comments .avatar, #comments input, #comments textarea{border-color:#000000;}
+#comments input:focus, #comments textarea:focus, #comments *:required:focus{border-color:#000000;}
+th{color:#DD5; background-color:#9F1C32;}
 tr, #comments li, #comments input[type="submit"], #comments input[type="reset"]
-{color:inherit; border-color: transparent; BACKGROUND-COLOR: #bdc0c5;}
-tr:nth-child(even), #comments li:nth-child(even){color:inherit; background-color:#F7F7F7;}
+{color:#000000; border-color: 000000; BACKGROUND-COLOR: #FFFFFF;}
+tr:nth-child(even), #comments li:nth-child(even){color:#000000; background-color:#FFFFFF;}
 table a, #comments a{background-color:inherit;}
 
-
+#373737
 /* ------------------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------------------ */
@@ -398,6 +400,7 @@ table a, #comments a{background-color:inherit;}
 	.imgl, .imgr{display:inline-block; float:none; margin:0 0 10px 0;}
 	.fl_left, .fl_right{display:block; float:none;}
 	.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter{display:block; float:none; width:auto; margin:0 0 30px 0; padding:0;}
+	
 	.group .group > *:last-child, .clear .clear > *:last-child, .clear .group > *:last-child, .group .clear > *:last-child{margin-bottom:0;}/* Experimental - Needs more testing in different situations, stops double margin when stacking */
 
 	#header{text-align:center;}

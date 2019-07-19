@@ -48,6 +48,22 @@ window.onclick = function(event) {
 <link rel="stylesheet" type="text/css" href="layout/styles/login.css"> 
 <link rel="stylesheet" type="text/css" href="analysisdesign.css"> 
 
+<style>
+  footer{
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  #A2B70D
+  text-align: center;
+  height:max-content;
+}
+  </style>
+
+
 </head>
 <body id="top">
 <!-- ################################################################################################ -->
@@ -433,6 +449,16 @@ echo $ct;
   </section>
   <!-- ################################################################################################ -->
 </div>
+
+<footer class="page-footer font-small special-color-dark pt-4">
+
+<p style="font-size: 20px"> For any further queries Email us at admin@somaiya.edu </p>
+
+<a href="contact_before.php" style="font-size: 20px">Click here for general FAQs</a>
+<!--
+<div class="vl"></div>
+-->
+</footer>
 
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->

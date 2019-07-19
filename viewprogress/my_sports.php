@@ -110,6 +110,21 @@ Licence URI: http://www.os-templates.com/template-terms
 
 
 
+<style>
+  footer{
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  #A2B70D
+  text-align: center;
+  height:max-content;
+}
+  </style>
+
 </head>
 <body id="top">
 <!-- ################################################################################################ -->

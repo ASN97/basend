@@ -108,6 +108,21 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 
+<style>
+ footer{
+
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: black;
+color: white;
+#A2B70D
+text-align: center;
+height:max-content;
+}
+  </style>
+
 
 
 </head>
@@ -322,10 +337,20 @@ echo "</td><td><a href='my_competition.php?delcomp=$fn'
  
    
   </main>
+  <footer class="page-footer font-small special-color-dark pt-4">
+
+<p style="font-size: 20px"> For any further queries Email us at admin@somaiya.edu </p>
+
+<a href="contact_before.php" style="font-size: 20px">Click here for general FAQs</a>
+<!--
+<div class="vl"></div>
+-->
+</footer>
     </div>
     <!-- ################################################################################################ -->
     <!-- / main body -->
     
+
 
 </div>
 
